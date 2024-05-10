@@ -1,0 +1,17 @@
+<p class="fw-bold text-center mb-5">Details of *** <span class="text-primary">{{todo.title}}</span> ***</p>
+
+
+
+<form (ngSubmit)="Update(todo)"class="w-50 mx-auto border p-5 rounded">
+    <div class="mb-3 mt-3 d-flex align-items-center">
+      <label for="email" class="form-label col-2">Task Title:</label>
+      <input type="email" class="form-control "  value="todo?.title" name="title" [(ngModel)]="todo.title">
+    </div>
+    
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input me-2" type="checkbox"  [(ngModel)]="todo!.completed" name="completed"> completed
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Update</button>
+  </form>
